@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flashcards Matemáticas - Ágata</title>
+    <!-- Configuración de MathJax -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        options: {
+          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+        },
+      };
+    </script>
+    <!-- Incluir MathJax desde CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"
+      async
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="welcome-screen" id="welcomeScreen">
+      <h1>¡Hola Ágata! 🌟</h1>
+      <p>
+        Vamos a repasar conceptos clave de Matemáticas de una forma dinámica.
+      </p>
+      <p>
+        Tienes 10 segundos para pensar en cada concepto antes de ver la
+        explicación.
+      </p>
+      <button onclick="startFlashcards()">¡Comenzar a Practicar! 🚀</button>
+    </div>
+
+    <div class="flashcard-container" id="flashcardContainer">
+      <div class="timer" id="timer">10</div>
+      <div class="flashcard" id="flashcard">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <div class="flashcard-content">
+              <!-- Contenido dinámico (Frente) -->
+            </div>
+          </div>
+          <div class="flashcard-back">
+            <div class="flashcard-content">
+              <!-- Contenido dinámico (Reverso) -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navigation">
+        <button onclick="previousCard()" id="prevButton" style="display: none">
+          ← Anterior
+        </button>
+        <button onclick="nextCard()" id="nextButton" style="display: none">
+          Siguiente →
+        </button>
+      </div>
+      <div class="progress">
+        <div class="progress-text" id="progressText">Tarjeta 1 de 15</div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+      <div class="motivation" id="motivation"></div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="script.js"></script>
+  </body>
+</html>
