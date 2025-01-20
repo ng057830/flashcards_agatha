@@ -338,7 +338,7 @@ const flashcards = [
   let currentCard = 0;
   let isFlipped = false;
   let timer;
-  let timeLeft = 1; // Restaurado a 10 segundos
+  let timeLeft = 5; // Restaurado a 10 segundos
   let canFlip = false;
   
   // Inicia la sesión de flashcards
@@ -355,7 +355,7 @@ const flashcards = [
   
   // Manejo del temporizador de 10 segundos
   function startTimer() {
-    timeLeft = 1;
+    timeLeft = 5;
     canFlip = false;
     isFlipped = false; // Restablecer el estado de volteo
     document.getElementById(
